@@ -60,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "frgui:build:production"
+              "buildTarget": "frgui:build:production"
             },
             "development": {
-              "browserTarget": "frgui:build:development"
+              "buildTarget": "frgui:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +71,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "frgui:build"
+            "buildTarget": "frgui:build"
           }
         },
         "test": {
