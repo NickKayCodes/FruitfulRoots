@@ -1,2 +1,14 @@
-package com.krath.fruitfulroots.conf.sec;public class SecConfig {
+package com.krath.fruitfulroots.conf.sec;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+
+@Configuration
+public class SecConfig {
+
+    @Bean
+    public BCryptPasswordEncoder bCryptPasswordEncoder(){
+        return new BCryptPasswordEncoder();
+    }
 }
