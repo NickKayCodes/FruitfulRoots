@@ -8,7 +8,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 @Service
@@ -70,12 +72,15 @@ public class UserServiceImpl implements UserService{
     }
 
     @Override
-    public ResponseEntity<String> loginUser(User user) {
+    public ResponseEntity<Map<String, String>> loginUser(User user) {
         User userCheck = userRepository.findByUsername(user.getUsername());
+        Map<String, String> response = new HashMap<>();
         if (userCheck == null || !pwEncoder.matchPassword(user.getPassword(), userCheck.getPassword())) {
-            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Invalid username or password");
+            response.put("error", "Invalid username or password");
         }
-        return ResponseEntity.ok().body("Login Successful");
+        //if password matches and user is not null
+        response.put("message", "Login Successful");
+        return ResponseEntity.ok(response);
     }
 
     @Override

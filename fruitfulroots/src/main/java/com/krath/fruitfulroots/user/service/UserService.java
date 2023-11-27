@@ -5,6 +5,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 @Service
@@ -19,7 +20,7 @@ public interface UserService {
 
     void removeUser(long id); // May c
 
-    ResponseEntity<String> loginUser(User user);
+    ResponseEntity<Map<String, String>>  loginUser(User user);
 
     String createUser(User userData);
 

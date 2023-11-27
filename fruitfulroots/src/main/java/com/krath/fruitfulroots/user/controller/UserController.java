@@ -7,7 +7,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 @RestController
@@ -18,14 +20,17 @@ public class UserController {
     private UserService userService;
 
     @PostMapping("/login")
-    public ResponseEntity<String> login(@RequestBody User userData) {
-        ResponseEntity<String> loginResult = userService.loginUser(userData);
+    public ResponseEntity<Map<String, String>> login(@RequestBody User userData) {
+        ResponseEntity<Map<String, String>>  loginResult = userService.loginUser(userData);
 
         if (loginResult.getStatusCode().is2xxSuccessful()) {
-            return ResponseEntity.ok("login successful");
+        return loginResult;
         } else {
-            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Invalid Username or Password");
+            Map<String, String> errorResponse = new HashMap<>();
+            errorResponse.put("error", "Invalid Username or Password");
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(errorResponse);
         }
+            
     }
 
     @PostMapping("/register")
