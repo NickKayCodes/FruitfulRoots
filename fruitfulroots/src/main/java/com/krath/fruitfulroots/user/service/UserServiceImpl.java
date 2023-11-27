@@ -24,6 +24,7 @@ public class UserServiceImpl implements UserService{
     public UserServiceImpl(FRPwEncoder pwEncoder){
         this.pwEncoder = pwEncoder;
     }
+
     @Override
     public void saveUser(User user) {
         userRepository.save(user);

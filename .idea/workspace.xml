@@ -5,19 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e66661a4-d37c-458a-a20a-e949272e189e" name="Changes" comment="created user entity, service, repositories, and controller classes along with the password encoder using bcrypt, and did some cors configuration for gui.">
+      <change afterPath="$PROJECT_DIR$/fruitfulroots/src/main/java/com/krath/fruitfulroots/store/product/controller/ProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitfulroots/src/main/java/com/krath/fruitfulroots/store/product/entity/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitfulroots/src/main/java/com/krath/fruitfulroots/store/product/repository/ProductRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitfulroots/src/main/java/com/krath/fruitfulroots/store/product/service/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fruitfulroots/src/main/java/com/krath/fruitfulroots/store/product/service/ProductServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frgui/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/frgui/angular.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frgui/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frgui/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frgui/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frgui/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frgui/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frgui/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frgui/src/app/app.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/frgui/src/app/app.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frgui/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frgui/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frgui/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frgui/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frgui/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frgui/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frgui/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/frgui/src/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fruitfulroots/src/main/java/com/krath/fruitfulroots/conf/sec/CORSConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/fruitfulroots/src/main/java/com/krath/fruitfulroots/conf/sec/CORSConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fruitfulroots/src/main/java/com/krath/fruitfulroots/user/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/fruitfulroots/src/main/java/com/krath/fruitfulroots/user/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fruitfulroots/src/main/java/com/krath/fruitfulroots/user/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/fruitfulroots/src/main/java/com/krath/fruitfulroots/user/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fruitfulroots/src/main/java/com/krath/fruitfulroots/user/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/fruitfulroots/src/main/java/com/krath/fruitfulroots/user/service/UserServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,8 +40,8 @@
     </option>
     <option name="myId2Visible">
       <map>
-        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
-        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
+        <entry key="com.haulmont.jpb.jpaInspector" value="false" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="false" />
         <entry key="com.haulmont.jpb.jpaStructure" value="false" />
       </map>
     </option>

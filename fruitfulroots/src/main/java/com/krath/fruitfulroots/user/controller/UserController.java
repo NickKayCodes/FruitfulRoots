@@ -30,7 +30,7 @@ public class UserController {
             errorResponse.put("error", "Invalid Username or Password");
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(errorResponse);
         }
-            
+
     }
 
     @PostMapping("/register")
