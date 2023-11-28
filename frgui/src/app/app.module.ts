@@ -11,12 +11,15 @@ import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { ProductsComponent } from './components/products/products.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     HomeComponent,
     LoginComponent,
+    ProductsComponent,
   ],
   imports: [
     BrowserModule,
