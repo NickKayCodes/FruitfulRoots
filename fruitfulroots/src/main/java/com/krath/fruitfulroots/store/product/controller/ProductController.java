@@ -63,9 +63,15 @@ public class ProductController {
         }
     }
 
-    @GetMapping("/category")
+    @GetMapping("/findByCategory")
     public ResponseEntity<List> findByCategory(@RequestBody String category){
         List<Product> productList = productService.findByCategory(category);
         return ResponseEntity.ok(productList);
+    }
+
+    @GetMapping("/getCategories")
+    public ResponseEntity<List> getCategories(){
+        List<String> distinctCategories = productService.findDistinctCategories();
+        return ResponseEntity.ok(distinctCategories);
     }
 }

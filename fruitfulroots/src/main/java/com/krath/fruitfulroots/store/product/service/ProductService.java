@@ -15,5 +15,6 @@ public interface ProductService {
     void removeProduct(long id);
     List<Product> findByCategory(String category);
     Optional<Product> findById(long id);
+    List<String> findDistinctCategories();
 
 }

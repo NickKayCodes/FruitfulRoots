@@ -66,4 +66,14 @@ public class ProductServiceImpl implements ProductService{
     public Optional<Product> findById(long id) {
         return productRepository.findById(id);
     }
+
+    /**
+     * since there will be multiple categories we wil send non duplicates
+     * @return
+     */
+    @Override
+    public List<String> findDistinctCategories() {
+
+        return productRepository.findDistinctCategories();
+    }
 }
