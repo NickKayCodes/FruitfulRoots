@@ -3,18 +3,20 @@
 <div class="col-lg-10">
   <h3 class="text-center">All Products</h3>
   <div class="card-container">
-    <a class="card-link" routerLink="/productDetails" >
-    <div class="row">
-      <div class="col-lg-4 col-md-6 mb-4" *ngFor="let p of products">
-        <div class="card">
-          <p>product image here</p>
-          <div class="card-body">
-            <h3 class="card-title text-center">{{ p.productName }}</h3>
-            <a href="" class="btn btn-primary">Add to Cart</a>
-          </div>
+    <a class="card-link" routerLink="/productDetails">
+      <div class="row">
+        <div class="col-lg-4 col-md-6 mb-4" *ngFor="let p of products">
+          <ng-container  *ngIf="!selectedCategory || p.category===selectedCategory">
+            <div class="card">
+              <p>product image here</p>
+              <div class="card-body">
+                <h3 class="card-title text-center">{{ p.productName }}</h3>
+                <a href="" class="btn btn-primary">Add to Cart</a>
+              </div>
+            </div>
+          </ng-container>
         </div>
       </div>
-    </div>
     </a>
   </div>
 </div>
