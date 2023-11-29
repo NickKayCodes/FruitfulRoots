@@ -1,27 +1,20 @@
-<div class="container">
-  <div class="row">
-    <div class="col-lg-2" *ngFor="let cat of productCategory">
-      <ul class="list-group">
-        <li class="list-group-item text-center">{{cat}}</li>
-        <li>test</li>
-      </ul>
-    </div>
-  </div>
-</div>
 <!-- ANY AND ALL IMAGES ARE FREE-USE BY PIXABAY AND OTHER FREE USE SITES ANY AI IMAGES ARE FROM CRAION.COM
     I UNDERSTAND I WILL HAVE TO CREATE NEW IMAGES ON MY OWN IF THIS PROJECT GOES LIVE(PRODUCTION)-->
 <div class="col-lg-10">
-    <h3 class="text-center">
-        All Products
-    </h3>
+  <h3 class="text-center">All Products</h3>
+  <div class="card-container">
+    <a class="card-link" routerLink="/productDetails" >
     <div class="row">
-        <div class="card" *ngFor="let p of products">
-            <p>product image here</p>
-            <div class="card-body">
-                <h5 class="card-title">{{p.productName}}</h5>
-                <p>{{p.productDescription}}</p>
-                <a href="" class="btn">Add to Cart</a>
-            </div>
+      <div class="col-lg-4 col-md-6 mb-4" *ngFor="let p of products">
+        <div class="card">
+          <p>product image here</p>
+          <div class="card-body">
+            <h3 class="card-title text-center">{{ p.productName }}</h3>
+            <a href="" class="btn btn-primary">Add to Cart</a>
+          </div>
         </div>
+      </div>
     </div>
+    </a>
+  </div>
 </div>

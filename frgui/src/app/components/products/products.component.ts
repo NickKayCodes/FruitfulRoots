@@ -7,7 +7,7 @@ import { ChangeDetectorRef } from '@angular/core';
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
-  styleUrl: './products.component.css',
+  styleUrls: ['./products.component.css'],
 })
 export class ProductsComponent implements OnInit {
   products: Products[] = [];
@@ -22,17 +22,10 @@ export class ProductsComponent implements OnInit {
     this.ps.getProducts().subscribe(
       (data: Products[]) => {
         this.products = data;
+        console.log(this.products)
       },
       (error) => {
         console.error('Error fetching products from server', error);
-      }
-    );
-    this.ps.getCategories().subscribe(
-      (data: string[]) => {
-        this.productCategory = data;
-      },
-      (error) => {
-        console.error('error fetching categories');
       }
     );
   }

@@ -12,6 +12,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { ProductsComponent } from './components/products/products.component';
+import { StoreComponent } from './components/store/store.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,8 @@ import { ProductsComponent } from './components/products/products.component';
     HomeComponent,
     LoginComponent,
     ProductsComponent,
+    StoreComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,

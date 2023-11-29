@@ -1,0 +1,11 @@
+.card-container {
+  position: relative;
+  padding-top: 5%;
+  margin: 0 auto;
+  max-width: 700px;
+  height: 100px;
+}
+
+.card-link{
+  color: black;
+}
