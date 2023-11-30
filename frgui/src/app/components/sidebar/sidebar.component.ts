@@ -11,6 +11,7 @@ export class SidebarComponent implements OnInit {
   productCategory: string[] = [];
   selectedCategory: string;
 
+
   constructor(private ps: ProductsService, private cs: CategoryService) {
     this.selectedCategory ='';
   }
